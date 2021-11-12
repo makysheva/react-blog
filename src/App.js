@@ -25,7 +25,8 @@ function App() {
   const removePost = (id) => {
     if (window.confirm('Вы уверенны, что хотите удалить статью?'))
       return dispatch({
-        id: id,
+        type: 'REMOVE_POST',
+        payload: id,
       });
   };
 
